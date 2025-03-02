@@ -10,6 +10,12 @@ from matplotlib import pyplot as plt
 from time import sleep
 # Sys will be used to fully exit the program in the event of nested loops
 import sys
+import os
+
+# Get the directory of the script so we don't have to execute 
+# the script from that directory for the file to work
+working_dir = os.path.dirname(os.path.realpath(__file__))
+os.chdir(working_dir)
 
 # Set value (in seconds) to use for sleep
 lil_pause = 0.8
@@ -61,6 +67,7 @@ while True:
         # Modified comment: Changed variable names from high/highs to temp/temps for clarity
         dates, temps = [], []
         for row in reader:
+            print(row)
             current_date = datetime.strptime(row[2], '%Y-%m-%d')
             dates.append(current_date)
             # Set row index to rownum variable to account for user choice
