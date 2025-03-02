@@ -1,3 +1,9 @@
+'''
+Jess Monnier
+CSD-325 Assignment 10.2
+1 March 2025
+'''
+
 import tkinter as tk
 import tkinter.messagebox as msg
 from tkinter import font
