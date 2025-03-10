@@ -1,0 +1,56 @@
+<!-- 
+	Jess Monnier, CSD-325 Assignment 11.2, 9 March 2025
+	I copied the bulk of this template from the video tutorial.
+	(Yeah, I paused it and copied it, I'm just extra I guess.)
+	I added a static link to the todo stylesheet and made the Home
+	and About links functional. And that's about it!
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>{% block title %}Django App{% endblock %}</title>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="{% static 'todo_style.css' %}">
+	</head>
+	<body class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">My Django App</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class="container">{% block content %} {% endblock %}</div>
+		
+		<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

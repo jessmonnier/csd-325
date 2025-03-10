@@ -1,0 +1,52 @@
+<!-- 
+	Jess Monnier, CSD-325 Assignment 11.2, 9 March 2025
+	I based this page heavily on the todo page code in index.html
+    but added my own content within the content div.
+-->
+
+{% extends "base.html" %} {% block title %} About {% endblock %}
+{% block content %}
+<div class="container">
+
+    <!-- title row -->
+    <div class="row">
+      <div class="offset-md-2 col-lg-9">
+        <div class="page-header">
+          <h1>
+            About This Site
+          </h1>
+        </div>
+      </div>
+    </div>
+    <hr />
+  
+    <!-- content -->
+    <div class="row">
+      <div class="offset-md-2 col-lg-6">
+        <div class="list-group">
+          <div class="list-group-item">
+            <p>This is an experimental Django site for me (Jess Monnier) to play around with Python in the context of a website. 
+            I used <a href="https://www.youtube.com/watch?v=nGIg40xs9e4">this YouTube video</a> ("Learn Django in 20 Minutes!" 
+            by Tech with Tim) and <a href="https://github.com/shreys7/django-todo/tree/develop">this GitHub distro</a> 
+            ("django-todo" by shreys7) as the basis for the Todo App on this site, but I made some tweaks:</p>
+            <ul>
+                <li>
+                    Since the base.html template in the video tutorial uses Bootstrap 4, which doesn't support glyphicons, I had 
+                    to switch the trashcan icon to SVG in a span that uses an adjusted version of the original icon's CSS styling.
+                </li>
+                <li>
+                    I used the default static folder model for Django rather than the adjusted one the GitHub distro was using.
+                </li>
+                <li>
+                    I added this page and updated the links in base.html to be functional.
+                </li>
+            </ul>
+            <p>No major changes, just little things I had to figure out to get the two slightly different templates to work together 
+            properly. I went through a couple different todo app templates before finding one that was the right fit for my current 
+            level of understanding about Django. I'm excited to grow my expertise in this area!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
